@@ -1,3 +1,3 @@
 # 
-# declare var cordova: any;
-# var pluginAPI = cordova.plugins.woosimPrint;
+declare var cordova: any;
+var pluginAPI = cordova.plugins.woosimPrint;

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.emilczar.woosimPrint" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>woosimPrint</name>
+    <platform name="ios">
+        <js-module name="woosimPrint" src="www/woosimPrint.js">
+            <clobbers target="cordova.plugins.woosimPrint" />
+        </js-module>
+        <config-file parent="/*" target="config.xml">
+            <feature name="woosimPrint">
+                <param name="ios-package" value="woosimPrint" />
+            </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
+            <array>
+                <string>com.woosim.wspr240</string>
+            </array>
+        </config-file>
+        <source-file src="src/ios/woosimPrint.m" />
+        <header-file src="src/ios/WSEncoder.h" />
+        <header-file src="src/ios/WSParser.h" />
+        <header-file src="src/ios/libwoosim212.a" />
+        <framework src="ExternalAccessory.framework" />
+    </platform>
+</plugin>
